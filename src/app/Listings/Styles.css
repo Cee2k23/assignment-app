@@ -1,0 +1,27 @@
+.one{
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    padding: 19px;
+}
+
+.four{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+.five{
+    background-color: gold;
+    border: 4px groove silver;
+    border-radius: 40px;
+    padding: 4px;
+}
+.five:hover{
+    background-color: goldenrod;
+    color: silver;
+    transform: rotate(23deg);
+}
+.two{
+    margin-left: 40px;
+    width: 5vw;
+}
