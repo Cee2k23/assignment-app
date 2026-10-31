@@ -65,10 +65,10 @@ export default function Section1() {
           </div>
 
           <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
-            <a href="#" className="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-900">Home</a>
-            <a href="#" className="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-900">Deals</a>
-            <a href="#" className="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-900">New In</a>
-            <a href="#" className="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-900">Collections</a>
+            <a href="#" className="border-2 border-black rounded-full px-3 py-2">Home</a>
+            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">Deals</a>
+            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">New In</a>
+            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">Collections</a>
           </nav>
 
           <div className="flex items-center gap-3">
