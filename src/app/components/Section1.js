@@ -1,28 +1,54 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 const formatPrice = (price) =>
   new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   }).format(price);
 
-export default async function Section1() {
-  let products = [];
+export default function Section1() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  try {
-    const response = await fetch("https://fakestoreapi.com/products", {
-      cache: "no-store",
-    });
+  useEffect(() => {
+    let isMounted = true;
 
-    if (!response.ok) {
-      throw new Error("Unable to load listings");
+    async function loadProducts() {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+
+        if (!response.ok) {
+          throw new Error("Unable to load listings");
+        }
+
+        const data = await response.json();
+
+        if (isMounted) {
+          setProducts(data);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
     }
 
-    products = await response.json();
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
+    loadProducts();
 
-  const featuredProducts = products.slice(0, 4);
-  const categories = [...new Set(products.map((product) => product.category))].slice(0, 5);
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const featuredProducts = useMemo(() => products.slice(0, 4), [products]);
+  const categories = useMemo(
+    () => [...new Set(products.map((product) => product.category))].slice(0, 5),
+    [products]
+  );
 
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
@@ -49,7 +75,7 @@ export default async function Section1() {
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
             </button>
-            <button className="rounded-full bg-gray-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:bg-slate-800">
+            <button className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:bg-slate-800">
               Cart (0)
             </button>
           </div>
@@ -58,18 +84,18 @@ export default async function Section1() {
         <section className="mt-8 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="overflow-hidden rounded-4xl bg-linear-to-br from-yellow-400 via-yellow-400 to-gray-400 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.25)] md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black">Fresh picks</p>
-            <h2 className="mt-4 max-w-lg text-4xl font-black tracking-tight md:text-5xl text-gray-800">
+            <h2 className="mt-4 max-w-lg text-4xl font-black tracking-tight md:text-5xl text-black">
               Upgrade your everyday essentials.
             </h2>
-            <p className="mt-4 max-w-md text-base font-bold text-gray-600 md:text-lg">
+            <p className="mt-4 max-w-md text-base font-bold text-black md:text-lg">
               Discover premium products at irresistible prices for work, home & style.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-gray-600 transition hover:bg-slate-200">
+              <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">
                 Shop now
               </button>
-              <button className="rounded-full border border-white/30 bg-white/5 px-5 py-3 text-sm font-semibold text-gray-600 transition hover:bg-white/10">
+              <button className="rounded-full border border-white/30 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
                 Explore offers
               </button>
             </div>
@@ -113,7 +139,7 @@ export default async function Section1() {
                   </div>
                 ))
               ) : (
-                <p className="text-sm text-slate-500">Categories loading....</p>
+                <p className="text-sm text-slate-500">{loading ? "Categories loading..." : "No categories available"}</p>
               )}
             </div>
           </aside>
@@ -141,7 +167,7 @@ export default async function Section1() {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className="h-full mt-1 w-full object-contain transition duration-300 group-hover:scale-105"
+                      className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
                     />
                     <span className="absolute left-4 top-4 rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-emerald-700">
                       {product.category}
@@ -149,15 +175,15 @@ export default async function Section1() {
                   </div>
 
                   <div className="p-5">
-                    <div className="flex items-center justify-between mt-[-4] text-xs font-medium text-slate-500">
+                    <div className="flex items-center justify-between text-xs font-medium text-slate-500">
                       <span className="inline-flex items-center gap-1">
-                        <span className="text-yellow-400">★</span>
+                        <span className="text-amber-400">★</span>
                         {product.rating?.rate ?? 0}
                       </span>
                       <span>{product.rating?.count ?? 0} reviews</span>
                     </div>
 
-                    <h4 className="mt-2 line-clamp-2 min-h-13 text-base font-semibold leading-6 text-slate-800">
+                    <h4 className="mt-3 line-clamp-2 min-h-13 text-base font-semibold leading-6 text-slate-800">
                       {product.title}
                     </h4>
 
@@ -175,7 +201,7 @@ export default async function Section1() {
               ))
             ) : (
               <div className="col-span-full rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-                No products available now. Kindly try again later.
+                {loading ? "Loading products..." : "No products available right now. Please try again later."}
               </div>
             )}
           </div>
