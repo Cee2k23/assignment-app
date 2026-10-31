@@ -80,4 +80,4 @@ function Page() {
     )
 }
 
-// Create a registration & style it. Validate it using 'required'
+export default Page;
