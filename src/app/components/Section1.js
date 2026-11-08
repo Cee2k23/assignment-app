@@ -52,8 +52,8 @@ export default function Section1() {
 
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
-      <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <header className="flex flex-col gap-4 rounded-[28px] bg-white px-5 py-4 shadow-sm ring-1 ring-slate-200 md:flex-row md:items-center md:justify-between">
+      <section className="mx-auto max-w-7xl px-4 py-6">
+        <header className="flex flex-col gap-4 rounded-[28px] bg-white px-5 py-4 shadow-sm ring-4 ring-slate-200 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-gray-400 text-lg font-bold text-white shadow-lg shadow-indigo-200">
               C
@@ -65,10 +65,10 @@ export default function Section1() {
           </div>
 
           <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
-            <a href="#" className="border-2 border-black rounded-full px-3 py-2">Home</a>
-            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">Deals</a>
-            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">New In</a>
-            <a href="#" className="border-2 border-black rounded-full px-3 py-2 hover:text-lg transition duration-500 hover:-translate-y-1">Collections</a>
+            <a href="/" className="rounded-full border-2 border-black px-3 py-2">Home</a>
+            <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Deals</a>
+            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">New In</a>
+            <a href="#" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Collections</a>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -82,7 +82,7 @@ export default function Section1() {
         </header>
 
         <section className="mt-8 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="overflow-hidden rounded-4xl bg-linear-to-br from-yellow-400 via-yellow-400 to-gray-400 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.25)] md:p-10">
+          <div className="overflow-hidden rounded-4xl bg-linear-to-br from-yellow-400 via-yellow-400 to-gray-400 p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.25)] md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black">Fresh picks</p>
             <h2 className="mt-4 max-w-lg text-4xl font-black tracking-tight md:text-5xl text-black">
               Upgrade your everyday essentials.
