@@ -17,15 +17,12 @@ export default function NewInPage() {
             <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Home</a>
             <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Deals</a>
             <button className="rounded-full border-2 border-black px-3 py-2">New In</button>
-            <a href="#" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Collections</a>
+            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Collections</a>
           </nav>
 
           <div className="flex items-center gap-3">
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
-            </button>
-            <button className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:bg-slate-800">
-              Cart (0)
             </button>
           </div>
         </header>
@@ -33,11 +30,11 @@ export default function NewInPage() {
         <div className="mt-8 space-y-8 pb-8">
           <section className="overflow-hidden rounded-[32px] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200">
             <div className="grid gap-0 md:grid-cols-2">
-              <div className="flex min-h-[260px] items-center justify-center bg-gradient-to-br from-violet-500 via-purple-400 to-slate-200 p-8 md:min-h-[420px]">
+              <div className="flex min-h-[260px] items-center justify-center bg-gradient-to-br from-yellow-400 via-yellow-300 to-slate-200 p-8 md:min-h-[420px]">
                 <div className="text-center">
-                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/80">Fresh arrivals</p>
-                  <h1 className="mt-3 text-4xl font-black tracking-tight text-white sm:text-5xl">New In</h1>
-                  <p className="mt-4 text-lg font-semibold text-white/90">The latest picks for your everyday style</p>
+                  <p className="text-xs font-bold mb-7 uppercase tracking-[0.3em] text-slate-700">Fresh arrivals</p>
+                  <h1 className="font-black pb-15 text-4xl tracking-tight text-slate-900 sm:text-5xl">New In</h1>
+                  <p className="mb-74 text-lg font-semibold text-slate-700">The latest picks for your everyday style</p>
                 </div>
               </div>
 

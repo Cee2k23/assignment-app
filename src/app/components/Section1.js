@@ -65,18 +65,15 @@ export default function Section1() {
           </div>
 
           <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
-            <a href="/" className="rounded-full border-2 border-black px-3 py-2">Home</a>
+            <button className="rounded-full border-2 border-black px-3 py-2">Home</button>
             <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Deals</a>
             <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">New In</a>
-            <a href="#" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Collections</a>
+            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Collections</a>
           </nav>
 
           <div className="flex items-center gap-3">
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
-            </button>
-            <button className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:bg-slate-800">
-              Cart (0)
             </button>
           </div>
         </header>
