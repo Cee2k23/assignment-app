@@ -1,7 +1,7 @@
 export default function DealsPage() {
   return (
     <main className="min-h-screen bg-slate-100 py-6 text-slate-900">
-        <header className="bg-white flex flex-col gap-4 mx-auto max-w-7xl rounded-[28px] px-5 py-4 shadow-sm ring-4 ring-slate-200 md:flex-row md:items-center md:justify-between">
+        <header className="mx-auto flex max-w-7xl flex-col gap-4 rounded-[28px] bg-white px-5 py-4 shadow-sm ring-4 ring-slate-200 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-gray-400 text-lg font-bold text-white shadow-lg shadow-indigo-200">
               C
@@ -12,14 +12,14 @@ export default function DealsPage() {
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
-            <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Home</a>
+          <nav className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-600 sm:gap-3">
+            <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Home</a>
             <a href="/deals" className="rounded-full border-2 border-black px-3 py-2">Deals</a>
-            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">New In</a>
-            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Collections</a>
+            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">New In</a>
+            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Collections</a>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
             </button>

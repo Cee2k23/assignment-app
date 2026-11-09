@@ -64,14 +64,14 @@ export default function Section1() {
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
-            <button className="rounded-full border-2 border-black px-3 py-2">Home</button>
-            <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Deals</a>
-            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">New In</a>
-            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-2 hover:scale-110">Collections</a>
+          <nav className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-600 sm:gap-3">
+            <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Home</a>
+            <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Deals</a>
+            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">New In</a>
+            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Collections</a>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
             </button>

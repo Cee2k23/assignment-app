@@ -13,14 +13,14 @@ export default function CollectionsPage() {
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
+          <nav className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-600 sm:gap-3">
             <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Home</a>
             <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Deals</a>
             <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">New In</a>
             <button className="rounded-full border-2 border-black px-3 py-2">Collections</button>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
               Search
             </button>
@@ -28,7 +28,7 @@ export default function CollectionsPage() {
         </header>
 
         <div className="mt-8 space-y-8 pb-8">
-          <section className="overflow-hidden rounded-[32px] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200">
+          <section className="overflow-hidden rounded-4xl bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200">
             <div className="grid gap-0 md:grid-cols-2">
               <div className="flex min-h-[260px] items-center justify-center bg-gradient-to-br from-yellow-400 via-yellow-300 to-slate-200 p-8 md:min-h-[420px]">
                 <div className="text-center">
