@@ -53,26 +53,47 @@ export default function Section1() {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       <section className="mx-auto max-w-7xl px-4 py-6">
-        <header className="flex flex-col gap-4 rounded-[28px] bg-white px-5 py-4 shadow-sm ring-4 ring-slate-200 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-3">
+        <header className="flex flex-col gap-4 rounded-[28px] bg-white px-3 py-3 shadow-sm ring-4 ring-slate-200 sm:px-5 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-yellow-400 to-gray-400 text-lg font-bold text-white shadow-lg shadow-indigo-200">
               C
             </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Mallfront</p>
-              <h1 className="text-xl font-bold text-slate-900">CityMall™</h1>
+            <div className="text-center sm:text-left">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-xs">
+                Mallfront
+              </p>
+              <h1 className="text-lg font-bold text-slate-900 sm:text-xl">
+                CityMall™
+              </h1>
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-600 sm:gap-3">
-            <a href="/" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Home</a>
-            <a href="/deals" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Deals</a>
-            <a href="/new-in" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">New In</a>
-            <a href="/collections" className="rounded-full border-2 border-black px-3 py-2 transition duration-200 hover:-translate-y-1 hover:scale-105">Collections</a>
+          <nav className="flex flex-wrap items-center justify-center gap-2 text-[11px] font-medium text-slate-600 sm:gap-3 sm:text-sm md:justify-end">
+            <button className="rounded-full border-2 border-black px-2.5 py-1.5 sm:px-3 sm:py-2">
+              Home
+            </button>
+            <a
+              href="/deals"
+              className="rounded-full border-2 border-black px-2.5 py-1.5 transition duration-200 hover:-translate-y-1 hover:scale-[1.04] sm:px-3 sm:py-2"
+            >
+              Deals
+            </a>
+            <a
+              href="/new-in"
+              className="rounded-full border-2 border-black px-2.5 py-1.5 transition duration-200 hover:-translate-y-1 hover:scale-[1.04] sm:px-3 sm:py-2"
+            >
+              New In
+            </a>
+            <a
+              href="/collections"
+              className="rounded-full border-2 border-black px-2.5 py-1.5 transition duration-200 hover:-translate-y-1 hover:scale-[1.04] sm:px-3 sm:py-2"
+            >
+              Collections
+            </a>
           </nav>
 
-          <div className="flex items-center justify-center gap-3">
-            <button className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
+          <div className="flex items-center justify-center gap-3 sm:justify-end">
+            <button className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-700 transition hover:bg-slate-100 sm:px-4 sm:text-sm">
               Search
             </button>
           </div>
@@ -80,12 +101,15 @@ export default function Section1() {
 
         <section className="mt-8 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="overflow-hidden rounded-4xl bg-linear-to-br from-yellow-400 via-yellow-400 to-gray-400 p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.25)] md:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black">Fresh picks</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black">
+              Fresh picks
+            </p>
             <h2 className="mt-4 max-w-lg text-4xl font-black tracking-tight md:text-5xl text-black">
               Upgrade your everyday essentials.
             </h2>
             <p className="mt-4 max-w-md text-base font-bold text-black md:text-lg">
-              Discover premium products at irresistible prices for work, home & style.
+              Discover premium products at irresistible prices for work, home &
+              style.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -116,10 +140,16 @@ export default function Section1() {
           <aside className="rounded-4xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">Trending</p>
-                <h3 className="mt-2 text-2xl font-bold text-slate-900">Top categories</h3>
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
+                  Trending
+                </p>
+                <h3 className="mt-2 text-2xl font-bold text-slate-900">
+                  Top categories
+                </h3>
               </div>
-              <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">Live</span>
+              <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">
+                Live
+              </span>
             </div>
 
             <div className="mt-6 space-y-3">
@@ -136,7 +166,11 @@ export default function Section1() {
                   </div>
                 ))
               ) : (
-                <p className="text-sm text-slate-500">{loading ? "Categories loading..." : "No categories available"}</p>
+                <p className="text-sm text-slate-500">
+                  {loading
+                    ? "Categories loading..."
+                    : "No categories available"}
+                </p>
               )}
             </div>
           </aside>
@@ -145,8 +179,12 @@ export default function Section1() {
         <section className="mt-12">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-semibold pt-14 uppercase tracking-[0.2em] text-indigo-600">Featured</p>
-              <h3 className="mt-2 text-3xl font-black text-slate-900">Best sellers</h3>
+              <p className="text-sm font-semibold pt-14 uppercase tracking-[0.2em] text-indigo-600">
+                Featured
+              </p>
+              <h3 className="mt-2 text-3xl font-black text-slate-900">
+                Best sellers
+              </h3>
             </div>
             <button className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50">
               All products
@@ -186,8 +224,12 @@ export default function Section1() {
 
                     <div className="mt-4 flex items-center justify-between">
                       <div>
-                        <p className="text-2xl font-black text-slate-900">{formatPrice(product.price)}</p>
-                        <p className="text-xs text-slate-400 line-through">{formatPrice(product.price * 1.25)}</p>
+                        <p className="text-2xl font-black text-slate-900">
+                          {formatPrice(product.price)}
+                        </p>
+                        <p className="text-xs text-slate-400 line-through">
+                          {formatPrice(product.price * 1.25)}
+                        </p>
                       </div>
                       <button className="rounded-full bg-slate-900 px-3 py-2 text-xs font-semibold text-white transition hover:bg-slate-800">
                         Add to cart
@@ -198,7 +240,9 @@ export default function Section1() {
               ))
             ) : (
               <div className="col-span-full rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-                {loading ? "Loading products..." : "No products available right now. Please try again later."}
+                {loading
+                  ? "Loading products..."
+                  : "No products available right now. Please try again later."}
               </div>
             )}
           </div>
